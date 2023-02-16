@@ -72,9 +72,11 @@ def equal(u,v):
     """
     assert u.D == v.D
     r = True
-    if v.D != u.D: r = False
+    if v.D != u.D:
+        r = False
     for i in v.D:
-        if v.f[i] if i in v.f else 0 != u.f[i] if i in u.f else 0: r = False
+        if (v.f[i] if i in v.f else 0) != (u.f[i] if i in u.f else 0):
+            r = False
     return r
 
 
